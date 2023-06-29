@@ -12,8 +12,14 @@
         android:theme="@style/Theme.ConcealPayAndroid"
         tools:targetApi="31">
         <activity
-            android:name=".OnBoardingActivity"
-            android:exported="false" />
+            android:name=".ui.onboarding.OnBoardingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
