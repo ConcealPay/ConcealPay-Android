@@ -1,12 +1,19 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'kotlin-android'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: "kotlinx-serialization"
+
 
 android {
-    namespace 'com.concealpay_android'
+    namespace 'com.concealpay.android'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.concealpay_android"
+        applicationId "com.concealpay.android"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -39,4 +46,54 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Network Requests
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:0"
+
+    // Dagger Hilt
+    implementation 'com.google.dagger:hilt-android:2.44'
+    kapt "com.google.dagger:hilt-compiler:2.44"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4'
+
+    // coroutine lifecycle scopes
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+
+    // Room Persistence
+    implementation "androidx.room:room-runtime:2.4.3"
+    implementation "androidx.room:room-ktx:2.4.3"
+    kapt "androidx.room:room-compiler:2.4.3"
+    kapt "android.arch.persistence.room:compiler:1.1.1"
+
+    // Security and Storage
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+    implementation 'androidx.fragment:fragment-ktx:1.5.2'
+
+    //Material.io
+    implementation 'com.google.android.material:material:1.9.0'
+
+    implementation 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
+
+    //Mockito
+    testImplementation 'org.mockito:mockito-inline:2.8.47'
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-RC3'
+    testImplementation 'org.mockito:mockito-core:3.10.0'
+    androidTestImplementation 'org.mockito:mockito-android:3.10.0'
+
+    implementation "com.airbnb.android:lottie:3.4.0"
+    implementation 'com.localebro:okhttpprofiler:1.0.8'
+
+    implementation("com.google.android.play:review:2.0.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
+
+
 }

@@ -1,4 +1,4 @@
-package com.concealpay_android
+package conceal.android
 
 import org.junit.Test
 

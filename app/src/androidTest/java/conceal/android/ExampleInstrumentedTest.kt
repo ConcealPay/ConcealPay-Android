@@ -1,4 +1,4 @@
-package com.concealpay_android
+package conceal.android
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
