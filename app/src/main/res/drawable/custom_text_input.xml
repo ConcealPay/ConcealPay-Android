@@ -1,0 +1,37 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Focused state -->
+    <item android:state_focused="true">
+        <layer-list>
+            <!-- Background color when focused -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/color_green" />
+                </shape>
+            </item>
+            <!-- Inner color when focused -->
+            <item android:left="0dp" android:right="0dp" android:top="0dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/white" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Default state (not focused/touched) -->
+    <item>
+        <layer-list>
+            <!-- Background color when not focused/touched -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/divider" />
+                </shape>
+            </item>
+            <!-- Inner color when not focused/touched -->
+            <item android:left="0dp" android:right="0dp" android:top="0dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/divider" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

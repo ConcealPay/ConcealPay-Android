@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Conceal Pay</string>
 
-<!--    OnBoarding  -->
+    <!--    OnBoarding  -->
     <string name="coming_soon">Coming Soon</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_your_number">Enter your number</string>
+    <string name="ghana_code">+233</string>
+    <string name="logo">logo</string>
+    <string name="termsText">By creating an account or signing in, I agree to the Spark Terms of Use and Privacy Policy</string>
+    <string name="sign_in">Sign In</string>
+
+    <string name="continue_text">Continue</string>
+    <string name="phone_number">Phone Number</string>
+
 </resources>
